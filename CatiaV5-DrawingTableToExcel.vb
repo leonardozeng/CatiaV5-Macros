@@ -12,7 +12,7 @@
 'ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 'OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 '----------------------------------------------------------------------------
-' Macro:    CatiaV5-DrawingTableToExcell.catvbs
+' Macro:    CatiaV5-DrawingTableToExcel.catvbs
 ' Version:  0.1
 ' Code:     Catia VBS
 ' Purpose:  Convert CATDrawing Table into Excel Spreadsheet 
