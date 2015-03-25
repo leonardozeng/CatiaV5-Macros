@@ -1,4 +1,4 @@
-'Copyright (c) 2014-2015 Krzysztof Gorzynski <gorzynskikrzysztof@gmail.com>
+'Copyright (c) 2015 Krzysztof Gorzynski <gorzynskikrzysztof@gmail.com>
 '
 'Permission to use, copy, modify, and distribute this software for any
 'purpose with or without fee is hereby granted, provided that the above
@@ -12,41 +12,42 @@
 'ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 'OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 '----------------------------------------------------------------------------
-' Macro:    CatiaV5-DelateDeactivatedElements.catvbs
-' Version:  0.0
+' Macro:    CatiaV5-SaveItWhenYouWant.catvbs
+' Version:  0.1
 ' Code:     Catia VBS
-' Purpose:  
+' Purpose:  Put the time when you want to save your file 
 ' Autor:    Krzysztof Górzyński
-' Datum:    24/03/2015
+' Datum:    25/03/2015
 '----------------------------------------------------------------------------
+
+Public TimeOnOFF As Boolean
 Sub CATMain()
 On Error Resume Next
 
-Dim partDocument As Document
-Set partDocument = CATIA.ActiveDocument
+Dim myTime As Date
+myTime = "14:38:01"
 
-Dim myPart As Part
-Set myPart = partDocument1.Part
+TimeOnOFF = Not TimeOnOFF
 
-'If Err.Number = 0 Then
+If TimeOnOFF Then
 
-    Dim selection1 As Selection
-    Set selection1 = partDocument.Selection
-    selection1.Search "CATPrtSearch.PartDesign Feature.Activity=FALSE"
+    Dim S As Integer
+        While TimeOnOFF = True
+
+            If Second(Now) > S Or Second(Now) = 0 Then
     
-    If selection1.Count = 0 Then
-        MsgBox "Nie ma deaktywowanych elementów"
-        Exit Sub
-        
-    Else
-        MsgBox ("Liczba deaktywowanych elementów to: " & selection1.Count & ". Kliknij Tak aby potwierdzić usuwanie lub Nie aby wyjść.")
-        selection1.Delete
-        part1.Update
-    End If
-
-    
-'Else
-'MsgBox "Otwary dokument nie jest dokumentem typu PartDesign!"
-'End If
+                S = Second(Now)
+                If Time = myTime Then
+                
+                    CATIA.ActiveDocument.Save
+                    MsgBox CATIA.ActiveDocument.Name & " was saved."
+                    
+                    Exit Sub
+                    
+                End If
+                
+            End If
+            DoEvents
+        Wend
+End If
 End Sub
-
