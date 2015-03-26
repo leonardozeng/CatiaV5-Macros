@@ -29,16 +29,23 @@ Set drawingDocument1 = CATIA.ActiveDocument
 Set drawingSheets1 = drawingDocument1.Sheets
 
 If TypeName(drawingDocument1) = "DrawingDocument" Then
+    'Check if it's "DrawingDocument"
+
     For l = 1 To drawingSheets1.Count
+
         Set mySheet = drawingSheets1.Item(l)
+
         For i = 1 To mySheet.Views.Count
+
             Set myView = mySheet.Views.Item(i)
             Set myTexts = myView.Texts
+
             For k = 1 To myTexts.Count
+
                 Set myText = myTexts.Item(k)
                 myText.Text = VBA.UCase(myText.Text)
+
             Next
         Next
     Next
-
 End Sub
