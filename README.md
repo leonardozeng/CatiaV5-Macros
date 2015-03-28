@@ -16,5 +16,5 @@ This repository contains CATIA V5 catvba macros mainly used within the Engineeri
 [3]: https://github.com/gorzk/CatiaV5-Macros/blob/master/AllModules/CatiaV5-SaveItWhenYouWant.vb
 [4]: https://github.com/gorzk/CatiaV5-Macros/blob/master/MechanicalDesign/Drafing/CatiaV5-TextToUpper.vb
 [5]: https://github.com/gorzk/CatiaV5-Macros/blob/master/MechanicalDesign/Drafing/CatiaV5-AddBomNumbersFromTxt.vb
-[6]:
+
 
