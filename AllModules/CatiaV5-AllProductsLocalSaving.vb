@@ -20,6 +20,7 @@
 ' Datum: 31/03/2015
 '----------------------------------------------------------------------------
 Sub CATMain()
+CATIA.DisplayFileAlerts = False
 
 'BrowseForFile
 Const WINDOW_HANDLE = 0
@@ -31,7 +32,6 @@ Set objFolder = objShell.BrowseForFolder _
 Set objFolderItem = objFolder.Self
 objPath = objFolderItem.Path
 
-
 'Get the root of the CATProduct
 Dim oRootProduct As Product
 Set oRootProduct = CATIA.ActiveDocument.Product
@@ -39,6 +39,7 @@ Set oRootProduct = CATIA.ActiveDocument.Product
 'Recursive function localSaveAs
 localSaveAs oRootProduct, objPath
 
+CATIA.DisplayFileAlerts = True
 End Sub
 
 Function localSaveAs(oRootProductItem, objPath)
