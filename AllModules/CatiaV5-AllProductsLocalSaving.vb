@@ -36,6 +36,11 @@ objPath = objFolderItem.Path
 Dim oRootProduct As Product
 Set oRootProduct = CATIA.ActiveDocument.Product
 
+If InStr(CATIA.ActiveDocument.Name, ".CATProduct") < 1 Then
+    MsgBox "Active CATIA Document is not a Product. Open a Product file and run this script again.", , msgboxtext
+    Exit Sub
+End If
+
 'Recursive function localSaveAs
 localSaveAs oRootProduct, objPath
 
