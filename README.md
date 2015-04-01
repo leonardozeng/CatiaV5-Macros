@@ -1,12 +1,12 @@
 # CatiaV5-Macros
 This repository contains CATIA V5 catvba macros mainly used within the Engineering Industry.
 <ol>
-<li>[CatiaV5-DrawingTableToExcel][1] | Added: 24-03-2015
-<li>[CatiaV5-DeleteDeactivatedElements][2] | InWork
-<li>[CatiaV5-SaveItWhenYouWant][3] | Added 26-03-2015
-<li>[CatiaV5-TextToUpper][4] | InWork
-<li>[CatiaV5-AddBomNumbersFromTxt][5] | InWork
-<li>[CatiaV5-AllProductsLocalSaving][6] | Added 31-03-2015
+<li>[CatiaV5-DrawingTableToExcel][1] |  Added: 24-03-2015
+<li>[CatiaV5-DeleteDeactivatedElements][2] |  InWork
+<li>[CatiaV5-SaveItWhenYouWant][3] |  Added 26-03-2015
+<li>[CatiaV5-TextToUpper][4] |  InWork
+<li>[CatiaV5-AddBomNumbersFromTxt][5] |  InWork
+<li>[CatiaV5-AllProductsLocalSaving][6] |  Added 31-03-2015
 <ol>
 
 ---
